@@ -6,12 +6,14 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.safeGesturesPadding
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.jetpackcomposecourse.basicLayouts.finalUI.HotelBookingScreen
+import com.example.jetpackcomposecourse.basic_modifiers.SpacingModifierDemo
 import com.example.jetpackcomposecourse.state_management.assignment_1.TodoListScreenRoot
 import com.example.jetpackcomposecourse.ui.theme.JetpackComposeCourseTheme
 
@@ -22,10 +24,12 @@ class MainActivity : ComponentActivity() {
         setContent {
             JetpackComposeCourseTheme {
 //                HotelBookingScreen()
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    TodoListScreenRoot(modifier = Modifier
-                        .padding(innerPadding))
-                }
+
+//                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
+//                    TodoListScreenRoot(modifier = Modifier
+//                        .padding(innerPadding))
+//                }
+                SpacingModifierDemo(modifier = Modifier.safeGesturesPadding())
             }
         }
     }
